@@ -33,6 +33,10 @@ export async function generateMetadata(): Promise<Metadata> {
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: alternates(locale, ""),
+    icons: {
+      icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+      apple: [{ url: "/brand/avazov-mark.svg" }],
+    },
     openGraph: {
       type: "website",
       siteName: "Og‘abek Avazov",

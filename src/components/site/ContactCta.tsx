@@ -14,7 +14,7 @@ export function ContactCta({ dict }: { dict: Dictionary }) {
             aria-hidden="true"
             className="stroke-text pointer-events-none absolute -top-4 right-6 hidden text-[clamp(100px,11vw,170px)] leading-none font-extrabold tracking-[-0.04em] select-none lg:block"
           >
-            HELLO
+            {dict.contact.watermark}
           </span>
           <div className="relative grid gap-10 lg:grid-cols-12 lg:items-end">
             <Reveal className="lg:col-span-7">

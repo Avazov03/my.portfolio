@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const DESKTOP = "(min-width: 992px)";
+const DESKTOP = "(min-width: 1024px)"; // match Tailwind `lg` (header / hamburger)
 const REDUCE = "(prefers-reduced-motion: reduce)";
 
 /**
@@ -21,12 +21,17 @@ export function SiteCursor() {
     const reduce = window.matchMedia(REDUCE);
     const fine = window.matchMedia("(pointer: fine)");
 
-    const sync = () => setOn(desktop.matches && fine.matches && !reduce.matches);
+    const sync = () => {
+      const enabled = desktop.matches && fine.matches && !reduce.matches;
+      setOn(enabled);
+      document.documentElement.classList.toggle("has-site-cursor", enabled);
+    };
     sync();
     desktop.addEventListener("change", sync);
     reduce.addEventListener("change", sync);
     fine.addEventListener("change", sync);
     return () => {
+      document.documentElement.classList.remove("has-site-cursor");
       desktop.removeEventListener("change", sync);
       reduce.removeEventListener("change", sync);
       fine.removeEventListener("change", sync);
