@@ -1,7 +1,14 @@
 {
   "meta": {
     "title": "Og‘abek Avazov — Full-stack developer",
-    "description": "Og‘abek Avazov is a full-stack developer building web systems for universities, AI services and businesses, from the interface to the server."
+    "description": "Og‘abek Avazov is a full-stack developer building web systems for universities, AI services and businesses, from the interface to the server.",
+    "projects": "Projects — Og‘abek Avazov",
+    "projectsDescription": "University platforms, AI products and websites: projects by Og‘abek Avazov.",
+    "about": "About — Og‘abek Avazov",
+    "aboutDescription": "Who Og‘abek Avazov is, how he works and which technologies he uses.",
+    "contact": "Contact — Og‘abek Avazov",
+    "contactDescription": "Get in touch with Og‘abek Avazov: Telegram, email or the project form.",
+    "notFound": "Page not found — Og‘abek Avazov"
   },
   "brand": {
     "wordmark": "AVAZOV",
@@ -17,7 +24,8 @@
     "cta": "Get in touch",
     "menuOpen": "Open menu",
     "menuClose": "Close menu",
-    "language": "Language"
+    "language": "Language",
+    "main": "Main menu"
   },
   "hero": {
     "photoAlt": "Og‘abek Avazov",
@@ -41,5 +49,154 @@
         "text": "Production deploys on Docker, Nginx and AWS, with tests and monitoring, so the system keeps running after launch."
       }
     ]
+  },
+  "home": {
+    "intro": {
+      "heading": ["IN SHORT", "ABOUT ME"],
+      "statement": "I build systems that real people use every day: university portals, AI assistants and websites, from the technical spec to a running version on the server.",
+      "more": "More about me",
+      "stats": [
+        { "value": "9", "label": "projects in the portfolio" },
+        { "value": "4", "label": "sites live right now" },
+        { "value": "3", "label": "backend languages: Node.js, Python, PHP" }
+      ]
+    },
+    "work": {
+      "heading": ["SELECTED", "WORK"],
+      "all": "All projects",
+      "view": "View project",
+      "watermark": "WORK"
+    },
+    "stack": {
+      "heading": ["MY", "TOOLKIT"],
+      "intro": "I pick the tool that fits the task. These are the ones I have used in production.",
+      "watermark": "STACK",
+      "groups": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Data",
+        "ai": "AI",
+        "ops": "DevOps and testing"
+      }
+    },
+    "services": {
+      "heading": ["WHAT", "I DO"],
+      "related": "Example",
+      "items": [
+        {
+          "title": "Web platforms and dashboards",
+          "text": "Complex systems with roles, staged workflows, files and reports, from university portals to internal panels.",
+          "projects": ["e-researcher", "loc"]
+        },
+        {
+          "title": "AI integration",
+          "text": "RAG, chatbots, voice assistants and agents: AI that works on top of your own documents and data.",
+          "projects": ["yurist-ai", "jarvis"]
+        },
+        {
+          "title": "Websites and CMS",
+          "text": "Fast, trilingual, search-ready websites and a CMS where you edit the content yourself.",
+          "projects": ["tdyu-endowment", "law-lab"]
+        },
+        {
+          "title": "Telegram bots and integrations",
+          "text": "Telegram bots, Google sign-in, external APIs and notifications.",
+          "projects": ["loc", "open-tsul"]
+        },
+        {
+          "title": "Deploy and support",
+          "text": "Docker, Nginx, PM2, SSL and monitoring, so the project keeps running after launch.",
+          "projects": ["zonic", "e-researcher"]
+        }
+      ]
+    },
+    "process": {
+      "heading": ["HOW", "WE WORK"],
+      "steps": [
+        { "title": "Analysis and spec", "text": "We turn the task, roles and acceptance criteria into a written spec." },
+        { "title": "Design", "text": "The interface and data structure are agreed before any code." },
+        { "title": "Development", "text": "In stages: each stage is shown and checked on its own." },
+        { "title": "Testing", "text": "Key flows are covered by automated tests." },
+        { "title": "Deploy", "text": "Production server, SSL and monitoring, then support." }
+      ]
+    }
+  },
+  "cta": {
+    "heading": ["GOT A", "PROJECT?"],
+    "text": "An idea, a spec or a system that needs fixing: write to me and we will look at it together.",
+    "telegram": "Message on Telegram",
+    "email": "Send an email"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "made": "Built with Next.js.",
+    "navLabel": "Site sections"
+  },
+  "projects": {
+    "heading": ["MY", "PROJECTS"],
+    "intro": "University platforms, AI products and websites. On each one I went from the idea to the deploy myself.",
+    "watermark": "WORK",
+    "filterLabel": "Filter by focus",
+    "all": "All",
+    "categories": {
+      "education": "Education",
+      "ai": "AI",
+      "media": "Media",
+      "web": "Web"
+    }
+  },
+  "project": {
+    "client": "Client",
+    "role": "Role",
+    "category": "Focus",
+    "stack": "Technologies",
+    "problem": "The task",
+    "solution": "The solution",
+    "features": "Key features",
+    "live": "Open the site",
+    "next": "Next project",
+    "back": "All projects",
+    "screenshot": "interface"
+  },
+  "about": {
+    "heading": ["OG‘ABEK", "AVAZOV"],
+    "role": "Full-stack developer, Tashkent",
+    "watermark": "ABOUT",
+    "bio": [
+      "I’m a full-stack developer. I take a product the whole way from the idea to a running version on the server: the spec, the interface, the backend, the database and the deploy.",
+      "Much of my work is for Tashkent State University of Law: a platform for researchers, open courses, the endowment fund and an internship system. Alongside that I run the Law Lab IT studio and build my own AI products."
+    ],
+    "principlesHeading": ["HOW", "I WORK"],
+    "principles": [
+      { "title": "Spec first, then code", "text": "Every project starts with a written spec, roles and acceptance criteria." },
+      { "title": "Tests are part of the job", "text": "Playwright, Jest and load tests: key flows are checked before every deploy." },
+      { "title": "Secure by default", "text": "Roles, audit trails, rate limits, file checks and secrets kept out of the repository." },
+      { "title": "Done means deployed", "text": "Production on Docker, Nginx and SSL. The work is not finished until the running system is checked." }
+    ],
+    "stackHeading": ["TECHNOLOGIES", "AND TOOLS"]
+  },
+  "contact": {
+    "heading": ["LET’S", "TALK"],
+    "intro": "A project, a collaboration or a question: write in whatever way suits you.",
+    "watermark": "HELLO",
+    "channelsLabel": "Contact channels",
+    "copy": "Copy",
+    "copied": "Copied",
+    "form": {
+      "heading": "Tell me about the project",
+      "name": "Your name",
+      "contact": "Telegram or email",
+      "type": "Project type",
+      "types": ["Web platform", "AI integration", "Website or landing page", "Telegram bot", "Other"],
+      "message": "A short description",
+      "submit": "Send the message",
+      "note": "The button opens your email app with the letter ready.",
+      "subject": "New project via the portfolio"
+    }
+  },
+  "notFound": {
+    "heading": ["PAGE", "NOT FOUND"],
+    "text": "This address does not exist or has moved. Carry on from the home page.",
+    "home": "Back to home"
   }
 }

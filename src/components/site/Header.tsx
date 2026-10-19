@@ -24,7 +24,7 @@ export function Header({ locale, dict }: HeaderProps) {
         label={dict.brand.homeLabel}
       />
 
-      <nav aria-label={dict.nav.home} className="hidden lg:block">
+      <nav aria-label={dict.nav.main} className="hidden lg:block">
         <NavLinks items={items} />
       </nav>
 

@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
+import { siteUrl } from "@/content/profile";
+import { SiteFooter } from "@/components/site/SiteFooter";
 import { locales } from "@/i18n/config";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
+import { alternates } from "@/i18n/alternates";
 import "../globals.css";
 
 const poppins = Poppins({
@@ -23,18 +26,31 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(): Promise<Metadata> {
-  const dict = await getDictionary();
+  const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
   return {
+    metadataBase: new URL(siteUrl),
     title: dict.meta.title,
     description: dict.meta.description,
+    alternates: alternates(locale, ""),
+    openGraph: {
+      type: "website",
+      siteName: "Og‘abek Avazov",
+      title: dict.meta.title,
+      description: dict.meta.description,
+      locale,
+      images: [{ url: "/images/projects/e-researcher.webp", width: 1382, height: 864 }],
+    },
   };
 }
 
 export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
-  const locale = await getLocale();
+  const [locale, dict] = await Promise.all([getLocale(), getDictionary()]);
   return (
     <html lang={locale} className={`${poppins.variable} ${montserrat.variable}`}>
-      <body className="min-h-svh font-sans antialiased">{children}</body>
+      <body className="min-h-svh font-sans antialiased">
+        {children}
+        <SiteFooter locale={locale} dict={dict} />
+      </body>
     </html>
   );
 }

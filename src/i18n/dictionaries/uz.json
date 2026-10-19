@@ -1,7 +1,14 @@
 {
   "meta": {
     "title": "Og‘abek Avazov — Full-stack dasturchi",
-    "description": "Og‘abek Avazov: universitetlar, AI-xizmatlar va bizneslar uchun frontenddan serverga qadar veb-tizimlar quradigan full-stack dasturchi."
+    "description": "Og‘abek Avazov: universitetlar, AI-xizmatlar va bizneslar uchun frontenddan serverga qadar veb-tizimlar quradigan full-stack dasturchi.",
+    "projects": "Loyihalar — Og‘abek Avazov",
+    "projectsDescription": "Universitet platformalari, AI mahsulotlar va saytlar: Og‘abek Avazovning loyihalari.",
+    "about": "Men haqimda — Og‘abek Avazov",
+    "aboutDescription": "Og‘abek Avazov kim, qanday ishlaydi va qaysi texnologiyalardan foydalanadi.",
+    "contact": "Aloqa — Og‘abek Avazov",
+    "contactDescription": "Og‘abek Avazov bilan bog‘lanish: Telegram, email yoki loyiha haqida forma.",
+    "notFound": "Sahifa topilmadi — Og‘abek Avazov"
   },
   "brand": {
     "wordmark": "AVAZOV",
@@ -17,7 +24,8 @@
     "cta": "Bog‘lanish",
     "menuOpen": "Menyuni ochish",
     "menuClose": "Menyuni yopish",
-    "language": "Til"
+    "language": "Til",
+    "main": "Asosiy menyu"
   },
   "hero": {
     "photoAlt": "Og‘abek Avazov",
@@ -41,5 +49,154 @@
         "text": "Docker, Nginx va AWS’da production deploy, testlar va monitoring — tizim ishga tushgandan keyin ham barqaror ishlashi uchun."
       }
     ]
+  },
+  "home": {
+    "intro": {
+      "heading": ["QISQACHA", "MEN HAQIMDA"],
+      "statement": "Real foydalanuvchilar har kuni ishlatadigan tizimlar quraman: universitet portallari, AI yordamchilar va saytlar — texnik topshiriqdan serverdagi ishlab turgan versiyagacha.",
+      "more": "Batafsil",
+      "stats": [
+        { "value": "9", "label": "loyiha portfolioda" },
+        { "value": "4", "label": "sayt hozir jonli ishlayapti" },
+        { "value": "3", "label": "backend tili: Node.js, Python, PHP" }
+      ]
+    },
+    "work": {
+      "heading": ["TANLANGAN", "LOYIHALAR"],
+      "all": "Barcha loyihalar",
+      "view": "Loyihani ko‘rish",
+      "watermark": "WORK"
+    },
+    "stack": {
+      "heading": ["ISH", "QUROLLARIM"],
+      "intro": "Har loyihada vazifaga mos vositani tanlayman. Quyidagilar production’da ishlatganlarim.",
+      "watermark": "STACK",
+      "groups": {
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "data": "Ma’lumotlar",
+        "ai": "AI",
+        "ops": "DevOps va test"
+      }
+    },
+    "services": {
+      "heading": ["NIMA", "QILAMAN"],
+      "related": "Misol",
+      "items": [
+        {
+          "title": "Veb-platformalar va kabinetlar",
+          "text": "Rollar, bosqichli jarayonlar, fayllar va hisobotlar bilan murakkab tizimlar: universitet portallaridan ichki panellargacha.",
+          "projects": ["e-researcher", "loc"]
+        },
+        {
+          "title": "AI integratsiya",
+          "text": "RAG, chatbotlar, ovozli assistentlar va agentlar: sizning hujjatlaringiz va ma’lumotlaringiz ustida ishlaydigan AI.",
+          "projects": ["yurist-ai", "jarvis"]
+        },
+        {
+          "title": "Saytlar va CMS",
+          "text": "Tez, uch tilli, qidiruv tizimlariga tayyor saytlar va kontentni o‘zingiz tahrirlaydigan CMS.",
+          "projects": ["tdyu-endowment", "law-lab"]
+        },
+        {
+          "title": "Telegram bot va integratsiyalar",
+          "text": "Telegram botlar, Google orqali kirish, tashqi API’lar va bildirishnomalar bilan bog‘lash.",
+          "projects": ["loc", "open-tsul"]
+        },
+        {
+          "title": "Deploy va qo‘llab-quvvatlash",
+          "text": "Docker, Nginx, PM2, SSL va monitoring: loyiha ishga tushgandan keyin ham barqaror ishlaydi.",
+          "projects": ["zonic", "e-researcher"]
+        }
+      ]
+    },
+    "process": {
+      "heading": ["ISH", "JARAYONI"],
+      "steps": [
+        { "title": "Tahlil va TZ", "text": "Vazifa, rollar va qabul mezonlarini yozma texnik topshiriqqa aylantiramiz." },
+        { "title": "Dizayn", "text": "Interfeys va ma’lumotlar tuzilmasi kod yozishdan oldin kelishiladi." },
+        { "title": "Ishlab chiqish", "text": "Bosqichma-bosqich: har bosqich alohida ko‘rsatiladi va tekshiriladi." },
+        { "title": "Test", "text": "Muhim oqimlar avtomatik testlar bilan tekshiriladi." },
+        { "title": "Deploy", "text": "Production server, SSL va monitoring; keyin qo‘llab-quvvatlash." }
+      ]
+    }
+  },
+  "cta": {
+    "heading": ["LOYIHANGIZ", "BORMI?"],
+    "text": "G‘oya, texnik topshiriq yoki tuzatish kerak bo‘lgan tizim — yozing, birga ko‘rib chiqamiz.",
+    "telegram": "Telegram’da yozish",
+    "email": "Email yuborish"
+  },
+  "footer": {
+    "rights": "Barcha huquqlar himoyalangan.",
+    "made": "Next.js’da qurilgan.",
+    "navLabel": "Sayt bo‘limlari"
+  },
+  "projects": {
+    "heading": ["MENING", "LOYIHALARIM"],
+    "intro": "Universitet platformalari, AI mahsulotlar va saytlar. Har birida g‘oyadan deploygacha o‘zim ishlaganman.",
+    "watermark": "WORK",
+    "filterLabel": "Yo‘nalish bo‘yicha saralash",
+    "all": "Hammasi",
+    "categories": {
+      "education": "Ta’lim",
+      "ai": "AI",
+      "media": "Media",
+      "web": "Veb"
+    }
+  },
+  "project": {
+    "client": "Mijoz",
+    "role": "Rol",
+    "category": "Yo‘nalish",
+    "stack": "Texnologiyalar",
+    "problem": "Vazifa",
+    "solution": "Yechim",
+    "features": "Asosiy imkoniyatlar",
+    "live": "Saytni ochish",
+    "next": "Keyingi loyiha",
+    "back": "Barcha loyihalar",
+    "screenshot": "interfeysi"
+  },
+  "about": {
+    "heading": ["OG‘ABEK", "AVAZOV"],
+    "role": "Full-stack dasturchi, Toshkent",
+    "watermark": "ABOUT",
+    "bio": [
+      "Men full-stack dasturchiman. G‘oyadan serverdagi ishlab turgan versiyagacha bo‘lgan butun yo‘lni o‘zim bosib o‘taman: texnik topshiriq, interfeys, backend, ma’lumotlar bazasi va deploy.",
+      "Ishlarimning katta qismi Toshkent davlat yuridik universiteti bilan bog‘liq: ilmiy izlanuvchilar platformasi, ochiq kurslar, endowment jamg‘armasi va amaliyot tizimi. Shu bilan birga Law Lab IT studiyasini yuritaman va o‘z AI mahsulotlarimni quraman."
+    ],
+    "principlesHeading": ["QANDAY", "ISHLAYMAN"],
+    "principles": [
+      { "title": "Avval TZ, keyin kod", "text": "Har loyiha yozma texnik topshiriq, rollar va qabul mezonlaridan boshlanadi." },
+      { "title": "Test ishning bir qismi", "text": "Playwright, Jest va yuklama testlari: muhim oqimlar har deploydan oldin tekshiriladi." },
+      { "title": "Xavfsizlik standart sifatida", "text": "Rollar, audit, rate limit, fayl tekshiruvi va maxfiy ma’lumotlar repodan tashqarida." },
+      { "title": "Ish deploy bilan tugaydi", "text": "Docker, Nginx va SSL bilan production. Tizim ishlab turgani tekshirilmaguncha ish tugamaydi." }
+    ],
+    "stackHeading": ["TEXNOLOGIYALAR", "VA VOSITALAR"]
+  },
+  "contact": {
+    "heading": ["KELING,", "GAPLASHAMIZ"],
+    "intro": "Loyiha, hamkorlik yoki savol bo‘lsa — o‘zingizga qulay usulda yozing.",
+    "watermark": "HELLO",
+    "channelsLabel": "Aloqa kanallari",
+    "copy": "Nusxalash",
+    "copied": "Nusxalandi",
+    "form": {
+      "heading": "Loyiha haqida yozing",
+      "name": "Ismingiz",
+      "contact": "Telegram yoki email",
+      "type": "Loyiha turi",
+      "types": ["Veb-platforma", "AI integratsiya", "Sayt yoki landing", "Telegram bot", "Boshqa"],
+      "message": "Loyiha haqida qisqacha",
+      "submit": "Xabarni yuborish",
+      "note": "Tugma email ilovangizni tayyor xat bilan ochadi.",
+      "subject": "Portfolio orqali yangi loyiha"
+    }
+  },
+  "notFound": {
+    "heading": ["SAHIFA", "TOPILMADI"],
+    "text": "Bu manzil mavjud emas yoki ko‘chirilgan. Bosh sahifadan davom eting.",
+    "home": "Bosh sahifaga"
   }
 }
