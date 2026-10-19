@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AVAZOV logo preview</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      background: #050505;
+      color: #c8c8c8;
+      font-family: ui-sans-serif, system-ui, sans-serif;
+      display: grid;
+      place-items: center;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    h1 { font-size: 0.85rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 500; opacity: 0.7; margin: 0 0 1rem; }
+    section { width: min(920px, 100%); }
+    .frame {
+      background: #000;
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+    }
+    .frame img, .frame object { width: 100%; height: auto; display: block; }
+    .row { display: grid; gap: 1.5rem; }
+    @media (min-width: 800px) { .row { grid-template-columns: 1fr 1fr; } }
+    a { color: #6ea8d8; }
+  </style>
+</head>
+<body>
+  <section class="row">
+    <div>
+      <h1>Anorra (asl)</h1>
+      <div class="frame">
+        <img src="./anorra-reference.svg" alt="ANORRA original"/>
+      </div>
+    </div>
+    <div>
+      <h1>Avazov (yangi)</h1>
+      <div class="frame">
+        <img src="./avazov-wordmark.svg" alt="AVAZOV wordmark"/>
+      </div>
+    </div>
+  </section>
+  <p style="font-size:12px;opacity:0.5">Lokal: <a href="/brand/preview.html">/brand/preview.html</a></p>
+</body>
+</html>

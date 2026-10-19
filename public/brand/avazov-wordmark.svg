@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- AVAZOV wordmark derived from Anorra horizontal primary (Adobe Illustrator paths).
+     A and planet-O are original geometry; V is A flipped on Y; Z matches palette/stroke language. -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  x="0px" y="0px" viewBox="0 0 1180 500" xml:space="preserve" role="img" aria-label="AVAZOV">
+<title>AVAZOV</title>
+<g id="Logo">
+
+  <g id="letter-A-1">
+    <polygon fill="#6D6F71" points="165.3,270.6 180,264.9 180,240.3"/>
+    <polygon fill="#47494A" points="194.6,270.6 180,264.9 180,240.3"/>
+    <linearGradient id="A1_main" gradientUnits="userSpaceOnUse" x1="112.5" y1="210.0516" x2="239" y2="323.5682">
+      
+    <stop offset="0" style="stop-color:#0D3859"/>
+    <stop offset="1" style="stop-color:#1E547D"/>
+    </linearGradient>
+    <polygon fill="url(#A1_main)" points="180.4,277.6 216.9,289.4 180,213.1 142.7,291.3 121.3,303.4 180,185.2 236.7,297.3 245.9,315.7"/>
+    <polygon fill="#0D3859" points="234,303.8 180.4,277.6 216.9,289.4"/>
+    <polygon fill="#1E547D" points="234,303.8 216.9,289.4 180,213.1"/>
+  </g>
+
+  <g id="letter-V-1">
+    <polygon fill="#6D6F71" points="325.3,229.4 340,235.1 340,259.7"/>
+    <polygon fill="#47494A" points="354.6,229.4 340,235.1 340,259.7"/>
+    <linearGradient id="V1_main" gradientUnits="userSpaceOnUse" x1="272.5" y1="289.9" x2="399" y2="176.4">
+      
+    <stop offset="0" style="stop-color:#0D3859"/>
+    <stop offset="1" style="stop-color:#1E547D"/>
+    </linearGradient>
+    <polygon fill="url(#V1_main)" points="340.4,222.4 376.9,210.6 340,286.9 302.7,208.7 281.3,196.6 340,314.8 396.7,202.7 405.9,184.3"/>
+    <polygon fill="#0D3859" points="394,196.2 340.4,222.4 376.9,210.6"/>
+    <polygon fill="#1E547D" points="394,196.2 376.9,210.6 340,286.9"/>
+  </g>
+
+  <g id="letter-A-2">
+    <polygon fill="#6D6F71" points="485.3,270.6 500,264.9 500,240.3"/>
+    <polygon fill="#47494A" points="514.6,270.6 500,264.9 500,240.3"/>
+    <linearGradient id="A2_main" gradientUnits="userSpaceOnUse" x1="432.5" y1="210.0516" x2="559" y2="323.5682">
+      
+    <stop offset="0" style="stop-color:#0D3859"/>
+    <stop offset="1" style="stop-color:#1E547D"/>
+    </linearGradient>
+    <polygon fill="url(#A2_main)" points="500.4,277.6 536.9,289.4 500,213.1 462.7,291.3 441.3,303.4 500,185.2 556.7,297.3 565.9,315.7"/>
+    <polygon fill="#0D3859" points="554,303.8 500.4,277.6 536.9,289.4"/>
+    <polygon fill="#1E547D" points="554,303.8 536.9,289.4 500,213.1"/>
+  </g>
+
+  <g id="letter-Z-1">
+    <linearGradient id="Z1_top" gradientUnits="userSpaceOnUse" x1="581.5" y1="202.3694" x2="667.9" y2="202.3694">
+      
+    <stop offset="0" style="stop-color:#1E547D"/>
+    <stop offset="0.2862" style="stop-color:#17486D"/>
+    <stop offset="0.68" style="stop-color:#0F3C5E"/>
+    <stop offset="1" style="stop-color:#0D3859"/>
+    </linearGradient>
+    <path fill="url(#Z1_top)" d="M650,203.5H589.9l-8.4-12.8h66.5c10.9,0,19.9,8.9,19.9,19.9c0,1.2-0.1,2.4-0.3,3.5
+      C664.2,207.8,657.6,203.5,650,203.5z"/>
+    <linearGradient id="Z1_diag" gradientUnits="userSpaceOnUse" x1="622" y1="215" x2="678" y2="285">
+      
+    <stop offset="0" style="stop-color:#6D6F71"/>
+    <stop offset="0.3072" style="stop-color:#686A6C"/>
+    <stop offset="0.6618" style="stop-color:#5B5D5E"/>
+    <stop offset="1" style="stop-color:#47494A"/>
+    </linearGradient>
+    <polygon fill="url(#Z1_diag)" points="678,218 692,228 622,282 608,272"/>
+    <linearGradient id="Z1_bot" gradientUnits="userSpaceOnUse" x1="581.5" y1="297.6" x2="667.9" y2="297.6">
+      
+    <stop offset="0" style="stop-color:#1E547D"/>
+    <stop offset="0.2862" style="stop-color:#17486D"/>
+    <stop offset="0.68" style="stop-color:#0F3C5E"/>
+    <stop offset="1" style="stop-color:#0D3859"/>
+    </linearGradient>
+    <path fill="url(#Z1_bot)" d="M650,296.5H589.9l-8.4,12.8h66.5c10.9,0,19.9-8.9,19.9-19.9c0-1.2-0.1-2.4-0.3-3.5
+      C664.2,292.2,657.6,296.5,650,296.5z"/>
+  </g>
+
+  <g id="letter-O" transform="translate(284.0,0)">
+    <linearGradient id="O_ring1" gradientUnits="userSpaceOnUse" x1="453.7372" y1="278.5008" x2="599.2136" y2="170.383">
+      
+    <stop offset="0" style="stop-color:#0D3859"/>
+    <stop offset="1" style="stop-color:#1E547D"/>
+    </linearGradient>
+    <path fill="url(#O_ring1)" d="M618.9,191.5c-0.3-0.5-1.3-0.8-2.8-0.8c-1.8,0-4.2,0.4-7.2,1.3c-6.3,1.8-12.8,2.6-19.4,2.6
+      c-8.9,0-17.6-1.6-25.9-4.8c-7.6-3.6-16-5.6-24.9-5.6c-32.2,0-58.3,26.1-58.3,58.3c0,11.4,3.3,22,8.9,31l0.1,0
+      c3.6-1.7,7.6-3.8,11.8-6.1l0.1,0c-4.7-7.1-7.5-15.6-7.5-24.8c0-24.8,20.1-44.9,44.9-44.9c9.1,0,17.6,2.7,24.7,7.4
+      c3.5,2.3,6.6,5.1,9.3,8.2c0,0,0,0.1,0,0.1c5.2,8.7-7.3,21.2-18.9,29.1c0,0-0.1,0-0.1,0.1c-9.1,7.2-19.9,14.6-27.7,19.6
+      c0,0-2.7,1.6-6.5,3.8l0,0c-3.8,2.2-8.6,5-13.3,7.6c-4.8,2.7-9.3,5.2-12,6.6c0,0-0.1,0-0.1,0c-0.5,0.3-0.9,0.5-1.3,0.6
+      c-6.1,2.9-14.3,6.3-18.7,6.3c-1.6,0-2.7-0.5-3.3-1.4c-0.9-1.4-1.1-4.3,7.6-12.4c0.4-0.4,0.5-1.1,0.2-1.6
+      c-0.2-0.4-0.6-0.6-1.1-0.6c-0.2,0-0.5,0.1-0.8,0.3c-2.5,2.2-4.8,4.2-6.8,6.1c-9.9,9.5-12.4,14.5-11.5,16c0.3,0.5,1.3,0.8,2.8,0.8
+      c3.4,0,9.1-1.5,16.5-4.4c5-1.9,10.7-4.5,17.1-7.6c0.2-0.1,0.5-0.2,0.7-0.4c0,0,0.1,0,0.1,0c4-2,8.1-4.1,12.4-6.4
+      c2.6-1.4,5.3-2.9,8-4.4c9.5-5.3,19.4-11.3,29.4-17.6c9.9-6.3,19.5-12.8,28.4-19.2c2.5-1.8,5-3.6,7.4-5.4c3.9-2.9,7.6-5.8,11-8.5
+      c0,0,0.1,0,0.1-0.1c0.2-0.2,0.4-0.3,0.6-0.5C616,201.4,620.1,193.4,618.9,191.5z"/>
+    <linearGradient id="O_ring2" gradientUnits="userSpaceOnUse" x1="612.0524" y1="181.3927" x2="455.3593" y2="287.2842">
+      
+    <stop offset="0" style="stop-color:#0D3859"/>
+    <stop offset="1" style="stop-color:#1E547D"/>
+    </linearGradient>
+    <path fill="url(#O_ring2)" d="M593.3,219.7c-0.2,0.2-0.5,0.4-0.7,0.6c-3.4,2.8-7.1,5.6-11,8.5c-2.4,1.8-4.9,3.6-7.4,5.4
+      c-8.9,6.4-18.5,12.9-28.4,19.2c-9.9,6.3-19.8,12.3-29.4,17.6c-2.7,1.5-5.4,3-8,4.4c-4.3,2.3-8.4,4.4-12.4,6.4
+      c-0.3,0.1-0.5,0.3-0.8,0.4c-6.4,3.1-12.1,5.7-17.1,7.6c-7.4,2.9-13.1,4.4-16.5,4.4c-1.5,0-2.4-0.3-2.8-0.8
+      c-0.9-1.4,1.5-6.5,11.5-16c2-1.9,4.3-4,6.8-6.1c0.3-0.2,0.6-0.3,0.8-0.3c0.4,0,0.8,0.2,1.1,0.6c0.3,0.5,0.2,1.2-0.2,1.6
+      c-8.7,8.2-8.5,11-7.6,12.4c0.6,0.9,1.7,1.4,3.3,1.4c4.4,0,12.6-3.4,18.7-6.3c0.4-0.2,0.8-0.4,1.4-0.7c2.7-1.4,7.2-3.9,12-6.6
+      c4.6-2.6,9.5-5.4,13.3-7.6l0,0c42.1-22.9,73.5-48.1,78.6-58.1c6.3-12.2-16-9.2-37.6-19.2c0.5,0.2,1,0.4,1.6,0.7
+      c8.8,3.6,18,5.4,27.4,5.4c6.5,0,13.1-0.9,19.4-2.6c3-0.8,5.4-1.3,7.2-1.3c1.5,0,2.4,0.3,2.8,0.8
+      C620.1,193.4,616,201.4,593.3,219.7z"/>
+    <path opacity="0.5" fill="#FFFFFF" d="M515.4,280.8c1.7,1,3.5,2,5.3,2.8C518.9,282.8,517.1,281.9,515.4,280.8L515.4,280.8z"/>
+    <linearGradient id="O_body" gradientUnits="userSpaceOnUse" x1="502.1021" y1="264.5946" x2="597.0966" y2="264.5946">
+      
+    <stop offset="0" style="stop-color:#6D6F71"/>
+    <stop offset="0.3072" style="stop-color:#686A6C"/>
+    <stop offset="0.6618" style="stop-color:#5B5D5E"/>
+    <stop offset="1" style="stop-color:#47494A"/>
+    </linearGradient>
+    <path fill="url(#O_body)" d="M595.4,228.4L595.4,228.4l-12,9.1l0,0c0.2,1.7,0.3,3.3,0.3,5c0,24.8-20.1,44.9-44.9,44.9
+      c-6.4,0-12.5-1.3-18.1-3.8c-1.8-0.8-3.6-1.8-5.3-2.8l0,0l-13.3,7c10,8.1,22.8,13,36.7,13c32.2,0,58.3-26.1,58.3-58.3
+      C597.1,237.7,596.5,232.9,595.4,228.4z"/>
+  </g>
+
+  <g id="letter-V-2">
+    <polygon fill="#6D6F71" points="985.3,229.4 1000,235.1 1000,259.7"/>
+    <polygon fill="#47494A" points="1014.6,229.4 1000,235.1 1000,259.7"/>
+    <linearGradient id="V2_main" gradientUnits="userSpaceOnUse" x1="932.5" y1="289.9" x2="1059" y2="176.4">
+      
+    <stop offset="0" style="stop-color:#0D3859"/>
+    <stop offset="1" style="stop-color:#1E547D"/>
+    </linearGradient>
+    <polygon fill="url(#V2_main)" points="1000.4,222.4 1036.9,210.6 1000,286.9 962.7,208.7 941.3,196.6 1000,314.8 1056.7,202.7 1065.9,184.3"/>
+    <polygon fill="#0D3859" points="1054,196.2 1000.4,222.4 1036.9,210.6"/>
+    <polygon fill="#1E547D" points="1054,196.2 1036.9,210.6 1000,286.9"/>
+  </g>
+</g>
+</svg>
