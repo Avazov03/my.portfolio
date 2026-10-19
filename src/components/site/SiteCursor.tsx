@@ -108,14 +108,14 @@ export function SiteCursor() {
       aria-hidden="true"
       className="pointer-events-none fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-500 lg:block"
     >
-      {/* Gold accent, no blend, no heavy glow — DNA: gold only as accent */}
+      {/* White cursor like before — NO mix-blend-difference (that washed UI colors) */}
       <div
         ref={dotRef}
-        className="absolute top-0 left-0 size-2 rounded-full bg-gold will-change-transform"
+        className="absolute top-0 left-0 size-2.5 rounded-full bg-white will-change-transform"
       />
       <div
         ref={ringRef}
-        className="absolute top-0 left-0 size-7 rounded-full border border-gold/50 will-change-transform"
+        className="absolute top-0 left-0 size-8 rounded-full border border-white/80 will-change-transform"
       />
     </div>
   );
