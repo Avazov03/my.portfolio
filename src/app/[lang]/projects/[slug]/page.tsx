@@ -5,6 +5,7 @@ import { getProject, projects, tr } from "@/content/projects";
 import { ProjectCover } from "@/components/projects/ProjectCover";
 import { ContactCta } from "@/components/site/ContactCta";
 import { Container } from "@/components/site/Container";
+import { GoldButton } from "@/components/site/GoldButton";
 import { PageStage } from "@/components/site/PageStage";
 import { Reveal } from "@/components/site/Reveal";
 import { ChevronLeft, ChevronRight } from "@/components/site/icons";
@@ -57,18 +58,14 @@ export default async function ProjectPage({ params }: PageProps<"/[lang]/project
         compact
       >
         <div className="mt-8 flex flex-wrap items-center gap-4">
-          {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-block rounded-full bg-gold px-7 py-3.5 text-xs font-extrabold tracking-[0.08em] text-black uppercase shadow-lg shadow-gold/15 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-gold-hover"
-            >
+          {project.live ? (
+            <GoldButton href={project.live} external className="px-7">
               {labels.live}
-            </a>
-          )}
+            </GoldButton>
+          ) : null}
           <Link
             href={`/${locale}/projects`}
+            data-cursor-grow
             className="group inline-flex items-center gap-3 text-sm font-semibold text-ink transition-colors duration-200 hover:text-gold"
           >
             <span className="flex size-8 items-center justify-center rounded-full bg-control/80 transition-colors duration-200 group-hover:bg-gold group-hover:text-black">

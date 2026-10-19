@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { heroPhoto } from "@/content/profile";
 import { StackSection } from "@/components/home/StackSection";
 import { ContactCta } from "@/components/site/ContactCta";
 import { Container } from "@/components/site/Container";
+import { GoldButton } from "@/components/site/GoldButton";
 import { PageStage } from "@/components/site/PageStage";
 import { Reveal } from "@/components/site/Reveal";
 import { SectionHeading } from "@/components/site/SectionHeading";
@@ -48,12 +48,9 @@ export default async function AboutPage() {
         }
       >
         <div className="mt-8">
-          <Link
-            href={`/${locale}/contact`}
-            className="inline-block rounded-full bg-gold px-7 py-3.5 text-xs font-extrabold tracking-[0.08em] text-black uppercase shadow-lg shadow-gold/15 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-gold-hover"
-          >
+          <GoldButton href={`/${locale}/contact`} className="px-7">
             {dict.nav.cta}
-          </Link>
+          </GoldButton>
         </div>
       </PageStage>
 

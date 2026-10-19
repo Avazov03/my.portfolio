@@ -2,6 +2,7 @@
 
 import { useId, useState, type FormEvent } from "react";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { GoldButton } from "@/components/site/GoldButton";
 
 type ContactFormProps = {
   email: string;
@@ -66,12 +67,7 @@ export function ContactForm({ email, copy }: ContactFormProps) {
       </label>
 
       <div className="flex flex-wrap items-center gap-5">
-        <button
-          type="submit"
-          className="rounded-full bg-gold px-8 py-3.5 text-xs font-extrabold tracking-[0.08em] text-black uppercase shadow-lg shadow-gold/15 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-gold-hover"
-        >
-          {copy.submit}
-        </button>
+        <GoldButton type="submit">{copy.submit}</GoldButton>
         <p className="text-sm text-muted">{copy.note}</p>
       </div>
     </form>

@@ -11,7 +11,8 @@ export function SocialLinks({ className = "" }: { className?: string }) {
             target="_blank"
             rel="noreferrer"
             aria-label={social.label}
-            className="flex size-7 items-center justify-center rounded-full bg-chip text-stage-edge transition-colors duration-200 hover:bg-gold"
+            data-cursor-grow
+            className="flex size-7 items-center justify-center rounded-full bg-chip text-stage-edge transition-[background-color,color,transform] duration-300 hover:scale-110 hover:bg-gold hover:text-black"
           >
             <SocialIcon id={social.id} className="size-3.5" />
           </a>

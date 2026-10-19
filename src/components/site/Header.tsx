@@ -1,6 +1,6 @@
-import Link from "next/link";
 import type { Locale } from "@/i18n/config";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { GoldButton } from "./GoldButton";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Logo } from "./Logo";
 import { MobileMenu } from "./MobileMenu";
@@ -30,12 +30,13 @@ export function Header({ locale, dict }: HeaderProps) {
 
       <div className="flex items-center gap-5 lg:gap-6">
         <LanguageSwitcher current={locale} label={dict.nav.language} className="hidden sm:flex" />
-        <Link
+        <GoldButton
           href={`/${locale}/contact`}
-          className="hidden rounded-lg border-[1.5px] border-ink px-4 py-1.5 text-xs font-semibold whitespace-nowrap text-ink transition-colors duration-200 hover:bg-ink hover:text-black sm:inline-block"
+          variant="outline"
+          className="hidden px-4 py-1.5 text-[11px] font-semibold tracking-[0.06em] whitespace-nowrap normal-case sm:inline-flex"
         >
           {dict.nav.cta}
-        </Link>
+        </GoldButton>
         <MobileMenu
           items={items}
           openLabel={dict.nav.menuOpen}

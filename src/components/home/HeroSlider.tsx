@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState, type ReactNode } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import type { Dictionary } from "@/i18n/dictionaries";
+import { GoldButton } from "@/components/site/GoldButton";
 import { ChevronLeft, ChevronRight } from "@/components/site/icons";
 
 type HeroSliderProps = {
@@ -96,12 +96,7 @@ export function HeroSlider({ copy, photo, ctaHref, socials }: HeroSliderProps) {
           </AnimatePresence>
 
           <motion.div className="mt-8" {...rise(0.25)}>
-            <Link
-              href={ctaHref}
-              className="inline-block rounded-full bg-gold px-8 py-3.5 text-xs font-extrabold tracking-[0.08em] text-black uppercase shadow-lg shadow-gold/15 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-gold-hover active:translate-y-0"
-            >
-              {copy.cta}
-            </Link>
+            <GoldButton href={ctaHref}>{copy.cta}</GoldButton>
           </motion.div>
         </div>
 

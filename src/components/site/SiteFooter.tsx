@@ -29,7 +29,11 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
             <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm font-medium">
               {items.map((item) => (
                 <li key={item.key}>
-                  <Link href={item.href} className="text-ink-soft transition-colors duration-200 hover:text-gold">
+                  <Link
+                    href={item.href}
+                    data-cursor-grow
+                    className="text-ink-soft transition-colors duration-200 hover:text-gold"
+                  >
                     {item.label}
                   </Link>
                 </li>
@@ -37,13 +41,18 @@ export function SiteFooter({ locale, dict }: SiteFooterProps) {
             </ul>
           </nav>
           <div className="flex flex-col gap-4 text-sm lg:col-span-3">
-            <a href={`mailto:${contact.email}`} className="text-ink transition-colors duration-200 hover:text-gold">
+            <a
+              href={`mailto:${contact.email}`}
+              data-cursor-grow
+              className="text-ink transition-colors duration-200 hover:text-gold"
+            >
               {contact.email}
             </a>
             <a
               href={contact.telegram}
               target="_blank"
               rel="noreferrer"
+              data-cursor-grow
               className="text-ink transition-colors duration-200 hover:text-gold"
             >
               Telegram {contact.telegramHandle}

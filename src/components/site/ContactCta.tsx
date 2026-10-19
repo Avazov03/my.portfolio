@@ -1,6 +1,7 @@
 import { contact } from "@/content/profile";
 import type { Dictionary } from "@/i18n/dictionaries";
 import { Container } from "./Container";
+import { GoldButton } from "./GoldButton";
 import { Reveal } from "./Reveal";
 import { SocialIcon } from "./icons";
 
@@ -28,21 +29,13 @@ export function ContactCta({ dict }: { dict: Dictionary }) {
             <Reveal delay={0.1} className="lg:col-span-5">
               <p className="max-w-md text-lg leading-relaxed text-ink">{dict.cta.text}</p>
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <a
-                  href={contact.telegram}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-gold px-7 py-3.5 text-xs font-extrabold tracking-[0.08em] text-black uppercase shadow-lg shadow-gold/15 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-gold-hover"
-                >
+                <GoldButton href={contact.telegram} external className="px-7">
                   <SocialIcon id="telegram" className="size-4" />
                   {dict.cta.telegram}
-                </a>
-                <a
-                  href={`mailto:${contact.email}`}
-                  className="rounded-lg border-[1.5px] border-ink px-5 py-3 text-xs font-semibold text-ink transition-colors duration-200 hover:bg-ink hover:text-black"
-                >
+                </GoldButton>
+                <GoldButton href={`mailto:${contact.email}`} variant="outline">
                   {dict.cta.email}
-                </a>
+                </GoldButton>
               </div>
             </Reveal>
           </div>

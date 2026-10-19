@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { GoldButton } from "@/components/site/GoldButton";
 import { Header } from "@/components/site/Header";
 import { Stage } from "@/components/site/Stage";
 import { getDictionary, getLocale } from "@/i18n/dictionaries";
@@ -24,12 +24,7 @@ export default async function NotFound() {
           </h1>
           <p className="mt-6 max-w-md text-base leading-relaxed text-ink-soft">{copy.text}</p>
           <div className="mt-8">
-            <Link
-              href={`/${locale}`}
-              className="inline-block rounded-full bg-gold px-8 py-3.5 text-xs font-extrabold tracking-[0.08em] text-black uppercase shadow-lg shadow-gold/15 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-gold-hover"
-            >
-              {copy.home}
-            </Link>
+            <GoldButton href={`/${locale}`}>{copy.home}</GoldButton>
           </div>
         </div>
       </Stage>
