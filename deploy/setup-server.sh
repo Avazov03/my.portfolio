@@ -1,47 +1,30 @@
 #!/usr/bin/env bash
-# One-time provisioning of the dedicated portfolio Lightsail instance. Safe to re-run.
-# Touches only: /var/www/portfolio, the nginx site for $DOMAIN, the PM2 app "portfolio", /swapfile.
+# Adds the portfolio to a shared server without touching the other sites on it. Safe to re-run.
+# Touches only: /var/www/portfolio, the nginx site file for $DOMAIN, the PM2 app "portfolio".
+# Installs nothing and removes nothing; node, pm2, nginx and certbot must already be present.
 set -euo pipefail
 
 DOMAIN=avazoff.zonic.fit
 APP_DIR=/var/www/portfolio
 REPO=https://github.com/Avazov03/my.portfolio.git
 EMAIL=avazovogabek86@gmail.com
+PORT=3210
 SITE=/etc/nginx/sites-available/$DOMAIN
 
 step() { printf '\n==> %s\n' "$*"; }
 
-step "Guard: this instance must not host other nginx sites"
-if [ -d /etc/nginx/sites-enabled ]; then
-  others=$(ls /etc/nginx/sites-enabled | grep -v -x -e default -e "$DOMAIN" || true)
-  if [ -n "$others" ]; then
-    echo "Other sites are enabled here: $others"
-    echo "Aborting so nothing else is affected."
-    exit 1
-  fi
+step "Preflight"
+for t in node npm pm2 nginx certbot git; do
+  command -v "$t" >/dev/null || { echo "missing: $t"; exit 1; }
+done
+node -e 'const [a,b]=process.versions.node.split(".").map(Number);process.exit(a>20||(a===20&&b>=9)?0:1)' \
+  || { echo "Node >= 20.9 is required"; exit 1; }
+if ss -tln | awk '{print $4}' | grep -q ":$PORT\$" && ! pm2 describe portfolio >/dev/null 2>&1; then
+  echo "Port $PORT is used by another process"; exit 1
 fi
+sudo nginx -t
 
-step "Swap (builds need it on small instances)"
-if [ "$(free -m | awk '/^Mem:/{print $2}')" -lt 2000 ] && ! swapon --show | grep -q /swapfile; then
-  sudo fallocate -l 2G /swapfile
-  sudo chmod 600 /swapfile
-  sudo mkswap /swapfile
-  sudo swapon /swapfile
-  grep -q '^/swapfile' /etc/fstab || echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
-fi
-
-step "System packages"
-sudo apt-get update -y
-sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nginx git curl certbot python3-certbot-nginx
-
-step "Node.js 22 + PM2"
-if ! node -v 2>/dev/null | grep -q '^v22\.'; then
-  curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-  sudo DEBIAN_FRONTEND=noninteractive apt-get install -y nodejs
-fi
-command -v pm2 >/dev/null || sudo npm install -g pm2
-
-step "App checkout and build"
+step "Checkout"
 sudo mkdir -p "$APP_DIR"
 sudo chown "$USER":"$USER" "$APP_DIR"
 if [ ! -d "$APP_DIR/.git" ]; then
@@ -50,23 +33,27 @@ else
   git -C "$APP_DIR" pull --ff-only
 fi
 cd "$APP_DIR"
-npm ci
-npm run build
 
-step "PM2 process"
+step "Build (low priority so the other apps keep their CPU)"
+npm ci
+NODE_OPTIONS=--max-old-space-size=1024 nice -n 10 npm run build
+
+step "PM2"
 if pm2 describe portfolio >/dev/null 2>&1; then
   pm2 reload deploy/ecosystem.config.cjs --update-env
 else
   pm2 start deploy/ecosystem.config.cjs
 fi
 pm2 save
-sudo env PATH="$PATH" pm2 startup systemd -u "$USER" --hp "$HOME" >/dev/null
 
-step "Nginx site"
-sudo cp deploy/nginx/$DOMAIN.conf "$SITE"
-sudo ln -sf "$SITE" /etc/nginx/sites-enabled/$DOMAIN
-sudo rm -f /etc/nginx/sites-enabled/default
-sudo nginx -t
+step "Nginx site (added only if absent, so certbot's edits survive re-runs)"
+[ -f "$SITE" ] || sudo cp "deploy/nginx/$DOMAIN.conf" "$SITE"
+sudo ln -sf "$SITE" "/etc/nginx/sites-enabled/$DOMAIN"
+if ! sudo nginx -t; then
+  sudo rm -f "/etc/nginx/sites-enabled/$DOMAIN"
+  echo "nginx test failed; the portfolio site was disabled again, other sites untouched"
+  exit 1
+fi
 sudo systemctl reload nginx
 
 step "HTTPS (only when DNS already points here)"
@@ -75,8 +62,10 @@ dns_ip=$(getent ahostsv4 "$DOMAIN" | awk 'NR==1{print $1}' || true)
 if [ -n "$dns_ip" ] && [ "$dns_ip" = "$public_ip" ]; then
   sudo certbot --nginx -d "$DOMAIN" --non-interactive --agree-tos -m "$EMAIL" --redirect
 else
-  echo "DNS for $DOMAIN is '$dns_ip', server is '$public_ip' — skipping certbot, re-run later."
+  echo "DNS for $DOMAIN is '$dns_ip', this server is '$public_ip'; certbot skipped, re-run after the DNS change."
 fi
 
 step "Health"
-curl -fsS -o /dev/null -w 'local app: %{http_code}\n' http://127.0.0.1:3210/uz
+sleep 2
+curl -fsS -o /dev/null -w 'app on :3210 -> %{http_code}\n' "http://127.0.0.1:$PORT/uz"
+curl -sS -o /dev/null -w 'nginx Host routing -> %{http_code}\n' -H "Host: $DOMAIN" http://127.0.0.1/uz
