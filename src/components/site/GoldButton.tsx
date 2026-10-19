@@ -34,7 +34,7 @@ export function GoldButton({
   const isGold = variant === "gold";
 
   const shell = [
-    "group relative inline-flex items-center justify-center overflow-hidden rounded-full text-xs font-extrabold tracking-[0.08em] uppercase",
+    "group relative isolate inline-flex items-center justify-center overflow-hidden rounded-full text-xs font-extrabold tracking-[0.08em] uppercase",
     "transition-[border-radius,transform] duration-500 ease-stage",
     "hover:rounded-lg active:translate-y-0",
     isGold
@@ -46,11 +46,8 @@ export function GoldButton({
     .filter(Boolean)
     .join(" ");
 
-  const fillClass = isGold
-    ? "bg-ink"
-    : "bg-gold";
-
-  const textHover = isGold ? "text-black" : "text-black";
+  const fillClass = isGold ? "bg-ink" : "bg-gold";
+  const textHover = "text-black";
   const textIdle = isGold ? "text-black" : "text-ink";
 
   const inner = reduce ? (
@@ -59,16 +56,17 @@ export function GoldButton({
     <>
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute top-1/2 left-1/2 z-0 size-0 -translate-x-1/2 -translate-y-1/2 rounded-full ${fillClass} transition-[width,height] duration-500 ease-[cubic-bezier(0.55,0.055,0.675,0.19)] group-hover:h-[420%] group-hover:w-full`}
+        className={`pointer-events-none absolute top-1/2 left-1/2 -z-10 size-0 -translate-x-1/2 -translate-y-1/2 rounded-full ${fillClass} transition-[width,height] duration-500 ease-[cubic-bezier(0.55,0.055,0.675,0.19)] group-hover:h-[420%] group-hover:w-full`}
       />
-      <span className="relative z-10 inline-grid overflow-hidden leading-none">
+      <span className="relative z-10 inline-grid overflow-hidden leading-none [text-rendering:geometricPrecision]">
         <span
           className={`col-start-1 row-start-1 inline-flex items-center gap-2.5 transition-transform duration-500 ease-stage group-hover:-translate-y-full ${textIdle}`}
         >
           {children}
         </span>
         <span
-          className={`col-start-1 row-start-1 inline-flex translate-y-full items-center gap-2.5 transition-transform duration-500 ease-stage group-hover:translate-y-0 ${textHover}`}
+          aria-hidden="true"
+          className={`pointer-events-none col-start-1 row-start-1 inline-flex translate-y-full items-center gap-2.5 transition-transform duration-500 ease-stage group-hover:translate-y-0 ${textHover}`}
         >
           {children}
         </span>
