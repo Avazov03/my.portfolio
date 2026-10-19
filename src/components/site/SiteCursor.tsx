@@ -80,10 +80,12 @@ export function SiteCursor() {
       dy += (my - dy) * 0.2;
       rx += (mx - rx) * 0.04;
       ry += (my - ry) * 0.04;
-      scale += ((grow ? 3 : 1) - scale) * 0.18;
+      // Grow without difference-blend washout; keep scale modest on targets
+      scale += ((grow ? 2 : 1) - scale) * 0.18;
 
       dot.style.transform = `translate3d(${dx}px, ${dy}px, 0) translate(-50%, -50%) scale(${scale})`;
       ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
+      ring.style.opacity = grow ? "0.35" : "0.7";
       raf = requestAnimationFrame(tick);
     };
 
@@ -104,15 +106,16 @@ export function SiteCursor() {
     <div
       ref={wrapRef}
       aria-hidden="true"
-      className="pointer-events-none fixed inset-0 z-[100] hidden opacity-0 mix-blend-difference transition-opacity duration-500 lg:block"
+      className="pointer-events-none fixed inset-0 z-[100] hidden opacity-0 transition-opacity duration-500 lg:block"
     >
+      {/* Gold accent, no blend, no heavy glow — DNA: gold only as accent */}
       <div
         ref={dotRef}
-        className="absolute top-0 left-0 size-2.5 rounded-full bg-white will-change-transform"
+        className="absolute top-0 left-0 size-2 rounded-full bg-gold will-change-transform"
       />
       <div
         ref={ringRef}
-        className="absolute top-0 left-0 size-7 rounded-full border border-white will-change-transform"
+        className="absolute top-0 left-0 size-7 rounded-full border border-gold/50 will-change-transform"
       />
     </div>
   );

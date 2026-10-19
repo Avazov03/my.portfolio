@@ -18,8 +18,8 @@ const pad = "px-8 py-3.5";
 const padOutline = "px-5 py-3";
 
 /**
- * Nexlab-style fill + text slide, portfolio gold DNA.
- * Hover: matn yuqoriga siljiydi, markazdan fill kengayadi.
+ * Fill + text slide — Avazov DNA:
+ * gold → gold-hover (not white); outline → gold fill.
  */
 export function GoldButton({
   children,
@@ -46,12 +46,10 @@ export function GoldButton({
     .filter(Boolean)
     .join(" ");
 
-  const fillClass = isGold
-    ? "bg-ink"
-    : "bg-gold";
-
-  const textHover = isGold ? "text-black" : "text-black";
+  // DNA: gold stays in the gold family; outline fills with gold accent
+  const fillClass = isGold ? "bg-gold-hover" : "bg-gold";
   const textIdle = isGold ? "text-black" : "text-ink";
+  const textHover = "text-black";
 
   const inner = reduce ? (
     <span className="relative z-10 inline-flex items-center gap-2.5">{children}</span>
