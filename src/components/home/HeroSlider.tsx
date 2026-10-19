@@ -106,7 +106,7 @@ export function HeroSlider({ copy, photo, ctaHref, socials }: HeroSliderProps) {
         </div>
 
         <motion.div
-          className="pointer-events-none relative -mx-6 mt-6 flex min-h-[44svh] flex-1 items-end justify-center sm:-mx-10 lg:absolute lg:inset-y-0 lg:right-[12%] lg:left-[36%] lg:z-20 lg:mx-0 lg:mt-0 lg:h-auto"
+          className="pointer-events-none relative -mx-6 mt-6 flex min-h-[44svh] flex-1 items-end justify-center sm:-mx-10 lg:absolute lg:inset-y-0 lg:right-[18%] lg:left-[30%] lg:z-20 lg:mx-0 lg:mt-0 lg:h-auto"
           {...(reduce
             ? {}
             : {

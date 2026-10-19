@@ -32,7 +32,7 @@ export default async function AboutPage() {
         intro={copy.role}
         watermark={copy.watermark}
         aside={
-          <div className="pointer-events-none relative -mx-6 -mb-14 h-[420px] sm:-mx-10 lg:absolute lg:right-[16%] lg:bottom-0 lg:mx-0 lg:mb-0 lg:h-[96%] lg:w-[420px]">
+          <div className="pointer-events-none relative -mx-6 -mb-14 h-[420px] sm:-mx-10 lg:absolute lg:right-[22%] lg:bottom-0 lg:mx-0 lg:mb-0 lg:h-[96%] lg:w-[420px]">
             <div className="absolute bottom-2 left-1/2 h-10 w-72 -translate-x-1/2 rounded-full bg-black/80 blur-2xl" />
             <Image
               src={heroPhoto.src}
