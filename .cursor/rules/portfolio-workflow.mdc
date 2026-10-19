@@ -1,0 +1,37 @@
+---
+description: Change → ask → commit/push/deploy → checkmark report workflow for the Avazov portfolio
+alwaysApply: true
+---
+
+# Ish tartibi (har bir prompt uchun)
+
+Foydalanuvchiga doim o'zbek tilida (lotin) javob ber.
+
+## 1. Prompt loyiha fayllarini o'zgartirdimi?
+
+- **O'zgartirmadi** (savol, tahlil, ko'rib chiqish): oxirida bitta qator yoz — `Hech narsa o'zgarmadi.` Commit/push/deploy haqida so'rama.
+- **O'zgartirdi**: ishni tugat, tekshiruvlarni o'tkaz (`npm run lint`, `npx tsc --noEmit`, `npm run build`), keyin **bir marta** `AskQuestion` bilan so'ra:
+  "O'zgarishlarni commit qilib GitHub'ga push qilaymi va serverga deploy qilaymi?"
+  Variantlar: `Ha — commit + push + deploy`, `Faqat commit + push`, `Yo'q, hozircha emas`.
+
+## 2. Ruxsat berilsa
+
+Faqat tanlangan qadamlarni bajar, tartib bilan, birortasi yiqilsa to'xta va sababini ayt:
+1. `git add -A` → aniq, inglizcha commit xabari (nima va nima uchun).
+2. `git push origin main`.
+3. Deploy (`portfolio-infra.mdc` dagi tartib) → saytni `curl -I` bilan tekshir.
+
+Ruxsatsiz hech qachon commit, push yoki deploy qilma. Force push qilma.
+
+## 3. Galochka hisobot
+
+Oxirida qisqa ro'yxat — faqat haqiqatda bajarilganlarga ✅, bajarilmagan yoki yiqilganlarga ❌ (sababi bilan), so'ralmaganlarga `—`:
+
+```
+✅ Tekshiruvlar: lint, tsc, build — toza
+✅ Commit: a1b2c3d "Add projects page"
+✅ Push: origin/main
+✅ Deploy: https://avazoff.zonic.fit — 200 OK
+```
+
+Tekshirmagan narsangga galochka qo'yma.

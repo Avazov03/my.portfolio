@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "Og‘abek Avazov — Full-stack developer",
+    "description": "Og‘abek Avazov is a full-stack developer building web systems for universities, AI services and businesses, from the interface to the server."
+  },
+  "brand": {
+    "wordmark": "AVAZOV",
+    "tagline": "WEB · AI · CLOUD",
+    "homeLabel": "Og‘abek Avazov — home"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Get in touch",
+    "menuOpen": "Open menu",
+    "menuClose": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "photoAlt": "Og‘abek Avazov",
+    "watermark": ["AV", "AZ", "OV"],
+    "cta": "Projects",
+    "prev": "Previous",
+    "next": "Next",
+    "slideLabel": "Focus",
+    "footnote": "Tashkent, Uzbekistan. Write to me about a new project or a collaboration.",
+    "slides": [
+      {
+        "lines": ["FULL-STACK", "DEVELOPER"],
+        "text": "I’m Og‘abek Avazov. I build web systems for universities, AI services and businesses, from the interface to the server."
+      },
+      {
+        "lines": ["AI", "SOLUTIONS"],
+        "text": "RAG, voice assistants and agents: I have shipped AI into real products such as Yurist AI and JARVIS."
+      },
+      {
+        "lines": ["DEVOPS", "& CLOUD"],
+        "text": "Production deploys on Docker, Nginx and AWS, with tests and monitoring, so the system keeps running after launch."
+      }
+    ]
+  }
+}

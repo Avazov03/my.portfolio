@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# agent tooling output
+.taste-skill/
+.playwright/
+.playwright-cli/
+
+# local-only infra notes (server IPs, ssh alias)
+.cursor/rules/portfolio-infra.mdc

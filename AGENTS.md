@@ -7,3 +7,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
 
 <!-- END:nextjs-agent-rules -->
+
+## Design
+
+Read `DESIGN.md` before any UI work. The home hero (`src/components/home/`) is the fixed base of the design; new pages and sections follow its tokens, type and composition rules. The taste-skill lint flags the stage gradient, the gold CTA shadow, the indicator glow, the photo drop shadow and Poppins: these are the brand exceptions listed in `DESIGN.md` §7, keep them.

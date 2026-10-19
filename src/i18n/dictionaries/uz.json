@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "title": "Og‘abek Avazov — Full-stack dasturchi",
+    "description": "Og‘abek Avazov: universitetlar, AI-xizmatlar va bizneslar uchun frontenddan serverga qadar veb-tizimlar quradigan full-stack dasturchi."
+  },
+  "brand": {
+    "wordmark": "AVAZOV",
+    "tagline": "WEB · AI · CLOUD",
+    "homeLabel": "Og‘abek Avazov — bosh sahifa"
+  },
+  "nav": {
+    "home": "Bosh sahifa",
+    "about": "Men haqimda",
+    "projects": "Loyihalar",
+    "services": "Xizmatlar",
+    "contact": "Aloqa",
+    "cta": "Bog‘lanish",
+    "menuOpen": "Menyuni ochish",
+    "menuClose": "Menyuni yopish",
+    "language": "Til"
+  },
+  "hero": {
+    "photoAlt": "Og‘abek Avazov",
+    "watermark": ["AV", "AZ", "OV"],
+    "cta": "Loyihalar",
+    "prev": "Oldingi",
+    "next": "Keyingi",
+    "slideLabel": "Yo‘nalish",
+    "footnote": "Toshkent, O‘zbekiston. Yangi loyiha yoki hamkorlik uchun yozing.",
+    "slides": [
+      {
+        "lines": ["FULL-STACK", "DEVELOPER"],
+        "text": "Men Og‘abek Avazov. Universitetlar, AI-xizmatlar va bizneslar uchun frontenddan serverga qadar ishlaydigan veb-tizimlar quraman."
+      },
+      {
+        "lines": ["AI", "YECHIMLAR"],
+        "text": "RAG, ovozli assistentlar va agentlar: Yurist AI va JARVIS kabi mahsulotlarda sun’iy intellektni haqiqiy ishga tushirganman."
+      },
+      {
+        "lines": ["DEVOPS", "& CLOUD"],
+        "text": "Docker, Nginx va AWS’da production deploy, testlar va monitoring — tizim ishga tushgandan keyin ham barqaror ishlashi uchun."
+      }
+    ]
+  }
+}
