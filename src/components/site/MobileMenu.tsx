@@ -34,6 +34,15 @@ export function MobileMenu({ items, openLabel, closeLabel, watermark, footer }: 
   }
 
   useEffect(() => {
+    const mq = window.matchMedia("(min-width: 1024px)");
+    const onResize = () => {
+      if (mq.matches) setOpen(false);
+    };
+    mq.addEventListener("change", onResize);
+    return () => mq.removeEventListener("change", onResize);
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
     const trigger = triggerRef.current;
     const previous = document.body.style.overflow;
@@ -58,7 +67,7 @@ export function MobileMenu({ items, openLabel, closeLabel, watermark, footer }: 
           role="dialog"
           aria-modal="true"
           aria-label={openLabel}
-          className="stage-light fixed inset-0 z-50 flex flex-col px-6 pt-7 pb-10 sm:px-14"
+          className="stage-light fixed inset-0 z-[60] flex flex-col px-6 pt-7 pb-10 sm:px-14"
           initial={reduce ? { opacity: 0 } : { opacity: 0, y: -24 }}
           animate={{ opacity: 1, y: 0 }}
           exit={reduce ? { opacity: 0 } : { opacity: 0, y: -24 }}
@@ -127,7 +136,7 @@ export function MobileMenu({ items, openLabel, closeLabel, watermark, footer }: 
         aria-expanded={open}
         aria-controls="site-menu"
         onClick={() => setOpen(true)}
-        className="-mr-1 p-1 text-ink transition-colors duration-200 hover:text-gold"
+        className="-mr-1 p-1 text-ink transition-colors duration-200 hover:text-gold lg:hidden"
       >
         <MenuIcon className="size-7" />
       </button>
