@@ -89,6 +89,7 @@ export function MobileMenu({ items, openLabel, closeLabel, watermark, footer }: 
               ref={closeRef}
               type="button"
               aria-label={closeLabel}
+              data-cursor-grow
               onClick={() => setOpen(false)}
               className="flex size-10 items-center justify-center rounded-full bg-control text-ink transition-colors duration-200 hover:bg-gold hover:text-black"
             >
@@ -135,6 +136,7 @@ export function MobileMenu({ items, openLabel, closeLabel, watermark, footer }: 
         aria-label={openLabel}
         aria-expanded={open}
         aria-controls="site-menu"
+        data-cursor-grow
         onClick={() => setOpen(true)}
         className="-mr-1 p-1 text-ink transition-colors duration-200 hover:text-gold lg:hidden"
       >

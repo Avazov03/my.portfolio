@@ -2,13 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const DESKTOP = "(min-width: 1024px)"; // match Tailwind `lg` (header / hamburger)
+const DESKTOP = "(min-width: 1024px)"; // match Tailwind `lg`
 const REDUCE = "(prefers-reduced-motion: reduce)";
+const GOLD = "#FCC464";
+const GOLD_RING = "rgba(252, 196, 100, 0.7)";
 
 /**
- * Custom cursor: oq nuqta + aylana (qorong'i fonda).
- * Link/tugma ustida qora bo'ladi — oq fill ustida matnni yuvmasin.
- * mix-blend-difference YO'Q (butun UI ni xiralashtirardi).
+ * Portfolio custom cursor — solid colors, no mix-blend-difference.
+ * Grow faqat [data-cursor-grow] (asosiy CTA / nav / social / menu).
+ * Grow rangi: Variant A — gold accent.
  */
 export function SiteCursor() {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -59,18 +61,14 @@ export function SiteCursor() {
 
     const isGrowTarget = (el: EventTarget | null) => {
       if (!(el instanceof Element)) return false;
-      return Boolean(
-        el.closest(
-          "a, button, [role='button'], [data-cursor-grow], input, textarea, select, label",
-        ),
-      );
+      return Boolean(el.closest("[data-cursor-grow]"));
     };
 
     const paint = (over: boolean) => {
-      // Interactive (often white fill) → dark cursor so text stays sharp
       if (over) {
-        dot.style.backgroundColor = "#0E0E0F";
-        ring.style.borderColor = "rgba(14, 14, 15, 0.85)";
+        // Variant A: gold on grow — readable on dark ink fill and light/gold fills
+        dot.style.backgroundColor = GOLD;
+        ring.style.borderColor = GOLD_RING;
       } else {
         dot.style.backgroundColor = "#FFFFFF";
         ring.style.borderColor = "rgba(255, 255, 255, 0.8)";
@@ -103,11 +101,11 @@ export function SiteCursor() {
       dy += (my - dy) * 0.2;
       rx += (mx - rx) * 0.04;
       ry += (my - ry) * 0.04;
-      scale += ((grow ? 1.75 : 1) - scale) * 0.18;
+      scale += ((grow ? 1.7 : 1) - scale) * 0.18;
 
       dot.style.transform = `translate3d(${dx}px, ${dy}px, 0) translate(-50%, -50%) scale(${scale})`;
       ring.style.transform = `translate3d(${rx}px, ${ry}px, 0) translate(-50%, -50%)`;
-      ring.style.opacity = grow ? "0.55" : "0.75";
+      ring.style.opacity = grow ? "0.55" : "0.8";
       raf = requestAnimationFrame(tick);
     };
 

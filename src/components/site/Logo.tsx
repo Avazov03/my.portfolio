@@ -11,7 +11,7 @@ type LogoProps = {
 
 export function Logo({ locale, wordmark, tagline, label }: LogoProps) {
   return (
-    <Link href={`/${locale}`} aria-label={label} data-cursor-grow className="group flex items-center gap-3.5 select-none">
+    <Link href={`/${locale}`} aria-label={label} className="group flex items-center gap-3.5 select-none">
       <span className="flex size-10 items-center justify-center overflow-hidden rounded-md bg-gold text-black transition-transform duration-300 ease-stage group-hover:rotate-45">
         <LogoMark className="size-10 transition-transform duration-300 ease-stage group-hover:-rotate-45" />
       </span>

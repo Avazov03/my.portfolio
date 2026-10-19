@@ -65,7 +65,6 @@ export default async function ProjectPage({ params }: PageProps<"/[lang]/project
           ) : null}
           <Link
             href={`/${locale}/projects`}
-            data-cursor-grow
             className="group inline-flex items-center gap-3 text-sm font-semibold text-ink transition-colors duration-200 hover:text-gold"
           >
             <span className="flex size-8 items-center justify-center rounded-full bg-control/80 transition-colors duration-200 group-hover:bg-gold group-hover:text-black">
